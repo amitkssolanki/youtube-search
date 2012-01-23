@@ -1,6 +1,31 @@
 = youtube-search
 
-Description goes here.
+YoutubeSearch is a basic gem for fetching search results using youtube api.
+
+== Usage
+* <tt>@results = YoutubeSearch.search("concert")</tt>
+
+  <i>Outputs => {:message=>"Success", :links=>["http://www.youtube.com/watch?v=lDE5QIg9sYY&feature=youtube_gdata", "http://www.youtube.com/watch?v=nT6325bmcsQ&feature=youtube_gdata", "http://www.youtube.com/watch?v=zq3j1IhoPhg&feature=youtube_gdata"]}</i>
+
+* <tt>@results = YoutubeSearch.search("concert", :maxresults => 10)</tt>
+
+  <i>Outputs => {:message=>"Success", :links=>["http://www.youtube.com/watch?v=lDE5QIg9sYY&feature=youtube_gdata", "http://www.youtube.com/watch?v=nT6325bmcsQ&feature=youtube_gdata", "http://www.youtube.com/watch?v=zq3j1IhoPhg&feature=youtube_gdata", "http://www.youtube.com/watch?v=Ndgddi2UFB8&feature=youtube_gdata", "http://www.youtube.com/watch?v=3aait4aOxP0&feature=youtube_gdata", "http://www.youtube.com/watch?v=naZ5eahKDVQ&feature=youtube_gdata", "http://www.youtube.com/watch?v=MjY94d5a-Fo&feature=youtube_gdata", "http://www.youtube.com/watch?v=kkxGlgahZrs&feature=youtube_gdata", "http://www.youtube.com/watch?v=IErXg5kBXXg&feature=youtube_gdata", "http://www.youtube.com/watch?v=965C-hwmk5k&feature=youtube_gdata"]}</i>
+
+* <tt>@results =  YoutubeSearch.search("concert", :order => 'rating')</tt>
+
+  <i>Outputs => {:message=>"Success", :links=>["http://www.youtube.com/watch?v=hJ_ZaQo4NFM&feature=youtube_gdata", "http://www.youtube.com/watch?v=o4sgwS0d7NA&feature=youtube_gdata", "http://www.youtube.com/watch?v=KRdcqoLM4bM&feature=youtube_gdata"]}</i>
+
+* <tt>@results[:links] => gives you links of searched string on youtube</tt>
+
+  <i>Outputs => ["http://www.youtube.com/watch?v=hJ_ZaQo4NFM&feature=youtube_gdata", "http://www.youtube.com/watch?v=o4sgwS0d7NA&feature=youtube_gdata", "http://www.youtube.com/watch?v=KRdcqoLM4bM&feature=youtube_gdata"]</i>
+
+* <tt>@results[:message] => gives you "Success" string on successful search</tt>
+
+  <i>Outputs => "Success"</i>
+
+* <tt>@results[:error] => gives you reason for search being failed</tt>
+
+  <i>Outputs => nil</i>
 
 == Contributing to youtube-search
  

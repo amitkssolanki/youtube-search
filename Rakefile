@@ -17,10 +17,11 @@ Jeweler::Tasks.new do |gem|
   gem.name = "youtube-search"
   gem.homepage = "http://github.com/amitkssolanki/youtube-search"
   gem.license = "MIT"
-  gem.summary = %Q{TODO: one-line summary of your gem}
-  gem.description = %Q{TODO: longer description of your gem}
+  gem.summary = %Q{YouTube Search}
+  gem.description = %Q{A gem for searching youtube videos}
   gem.email = "amitkssolanki@gmail.com"
   gem.authors = ["Amit Solanki"]
+  gem.files = FileList['lib/*.rb'].to_a
   # dependencies defined in Gemfile
 end
 Jeweler::RubygemsDotOrgTasks.new
